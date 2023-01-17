@@ -1,4 +1,4 @@
-console.log("Client side js file loaded Suss")
+console.log("Client side js file loaded Suss ")
 
 
 const weatherForm = document.querySelector('form') 
@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
 
 
-    fetch('http://localhost:3000/weather?address=' + location).then((responce) => {
+    fetch('/weather?address=' + location).then((responce) => {
         responce.json().then((data) => {
             if(data.error){
                 messageOne.textContent = data.error
